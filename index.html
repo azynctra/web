@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azynctra - AI-Powered Software Solutions</title>
+    <meta name="description" content="Azynctra delivers cutting-edge AI-powered software products and services that transform how businesses operate." />
+    <meta name="author" content="Azynctra" />
+
+    <meta property="og:title" content="Azynctra - AI-Powered Software Solutions" />
+    <meta property="og:description" content="Empowering Business through AI Innovation" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://azynctra.com/og-image.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@azynctra" />
+    <meta name="twitter:image" content="https://azynctra.com/og-image.png" />
+
+    <link rel="icon" href="/favicon.ico" />
+    
+    <!-- Prevent theme flash -->
+    <script>
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      (function() {
+        try {
+          const savedTheme = localStorage.getItem('theme');
+          const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          
+          if (savedTheme === 'dark' || (savedTheme !== 'light' && prefersDark)) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (err) { console.error(err); }
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
