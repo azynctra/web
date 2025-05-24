@@ -57,13 +57,15 @@ const ContactSection = () => {
       type: "Address",
       value: "Colombo, Sri Lanka",
       icon: MapPin
-    },
-    {
-      type: "Schedule Call",
-      value: "Book a consultation",
-      icon: Calendar
     }
   ];
+
+  // Placeholder for scheduling link
+  const scheduleLink = "#"; // Replace with Calendly or real link if available
+  const handleScheduleClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    alert("Scheduling coming soon! (Integrate Calendly or similar)");
+  };
 
   return (
     <section id="contact" className="section-with-bg py-16 dark:bg-azynctra-muted/30 bg-gradient-light dark:bg-gradient-dark">
@@ -113,6 +115,17 @@ const ContactSection = () => {
                     </div>
                   </div>
                 ))}
+                {/* Book a consultation button */}
+                <div className="flex items-center mt-4">
+                  <div className="p-2 rounded-lg bg-azynctra-primary/20 text-primary mr-4">
+                    <Calendar className="h-5 w-5" />
+                  </div>
+                  <Button asChild size="sm">
+                    <a href={scheduleLink} onClick={handleScheduleClick}>
+                      Book a consultation (Schedule Call)
+                    </a>
+                  </Button>
+                </div>
               </div>
 
               <div className="mt-8">

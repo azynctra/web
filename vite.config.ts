@@ -22,5 +22,9 @@ export default defineConfig(({ mode }) => ({
     },
   },
   assetsInclude: ['**/*.jpg', '**/*.png', '**/*.svg', '**/*.gif'],
-  base: '/web',
+  base: './',
+  build: {
+    outDir: 'dist',      // gets deployed to github pages
+    assetsDir: 'assets', // static assets (images, js, css, etc.)
+},
 }));
